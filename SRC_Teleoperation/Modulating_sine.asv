@@ -1,0 +1,9 @@
+clear all; close all; clc;
+
+t = [0:0.01:3.01];
+amp = [repmat(1,1,length(t)/2),repmat(2,1,length(t)/2)];
+f = [repmat(1,1,length(t)/2),repmat(2,1,length(t)/2)];
+y = amp .* sin (f .* 2 .* pi .* t);
+
+figure()
+plot(t,y);
